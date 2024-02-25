@@ -5,7 +5,7 @@ inst() {
 }
 
 # paru
-paru() {
+installer() {
     cd /tmp
     wget https://aur.archlinux.org/cgit/aur.git/snapshot/paru-bin.tar.gz -O - | tar -xz
     cd paru-bin
@@ -121,7 +121,7 @@ ask() {
 # categories
 
 global() {
-    ask "Install paru" paru
+    ask "Install paru" installer
     ask "Install gnome extensions" gnome
     ask "Configure bluetooth" bluetooth
     ask "Configure gnome" gnome
