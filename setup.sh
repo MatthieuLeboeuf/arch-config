@@ -16,8 +16,11 @@ installer() {
 
 # gnome
 gnome() {
+    gnome-extensions enable system-monitor@gnome-shell-extensions.gcampax.github.com
     inst gnome-shell-extension-app-icons-taskbar
+    gnome-extensions enable aztaskbar@aztaskbar.gitlab.com
     inst gnome-shell-extension-appindicator
+    gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 }
 
 # bluetooth
@@ -35,6 +38,7 @@ gnome-config() {
     gsettings set org.gnome.desktop.interface clock-show-seconds true
     gsettings set org.gnome.desktop.interface clock-show-weekday true
     gsettings set org.gnome.desktop.calendar show-weekdate true
+    gsettings set org.gnome.desktop.interface clock-format 24h
 }
 
 # games
@@ -123,7 +127,7 @@ global() {
     ask "Install paru" installer
     ask "Install gnome extensions" gnome
     ask "Configure bluetooth" bluetooth
-    ask "Configure gnome" gnome
+    ask "Configure gnome" gnome-config
 }
 
 games() {
