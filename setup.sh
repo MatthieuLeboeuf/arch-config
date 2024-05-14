@@ -88,6 +88,14 @@ nmap() {
     inst nmap
 }
 
+nload() {
+    inst nload
+}
+
+ncdu() {
+    inst ncdu
+}
+
 filezilla() {
     inst filezilla
 }
@@ -151,6 +159,8 @@ office() {
 advanced() {
     ask "Install dig" dig
     ask "Install nmap" nmap
+    ask "Install ncdu" ncdu
+    ask "Install nload" nload
     ask "Install filezilla" filezilla
     ask "Install vscode" vscode
     ask "Install wine" wine
