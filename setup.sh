@@ -18,7 +18,6 @@ installer() {
 gnome() {
     inst gnome-shell-extension-app-icons-taskbar
     inst gnome-shell-extension-appindicator
-    inst gnome-shell-extension-simple-system-monitor
 }
 
 # bluetooth
@@ -40,7 +39,7 @@ gnome-config() {
 
 # games
 minecraft() {
-    inst prismlauncher-qt5-bin
+    inst prismlauncher
 }
 
 epicgames() {
