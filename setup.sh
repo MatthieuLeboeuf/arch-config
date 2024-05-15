@@ -80,6 +80,12 @@ discord() {
 }
 
 # advanced
+docker() {
+    inst docker
+    inst docker-compose
+    sudo usermod -aG docker $USER
+}
+
 dig() {
     inst bind-tools
 }
@@ -157,6 +163,7 @@ office() {
 }
 
 advanced() {
+    ask "Install docker" docker
     ask "Install dig" dig
     ask "Install nmap" nmap
     ask "Install ncdu" ncdu
