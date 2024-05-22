@@ -18,9 +18,7 @@ installer() {
 gnome() {
     gnome-extensions enable system-monitor@gnome-shell-extensions.gcampax.github.com
     inst gnome-shell-extension-app-icons-taskbar
-    gnome-extensions enable aztaskbar@aztaskbar.gitlab.com
     inst gnome-shell-extension-appindicator
-    gnome-extensions enable appindicatorsupport@rgcjonas.gmail.com
 }
 
 # bluetooth
@@ -43,7 +41,7 @@ gnome-config() {
 
 # games
 minecraft() {
-    inst prismlauncher
+    inst prismlauncher-qt5-bin
 }
 
 epicgames() {
@@ -63,6 +61,10 @@ onlyoffice() {
     inst onlyoffice-bin
 }
 
+libreoffice() {
+    inst libreoffice-fresh
+}
+
 firefox() {
     inst firefox
 }
@@ -77,6 +79,23 @@ spotify() {
 
 discord() {
     inst discord
+}
+
+# dev
+phpstorm() {
+    inst phpstorm
+}
+
+webstorm() {
+    inst webstorm
+}
+
+goland() {
+    inst goland
+}
+
+pycharm() {
+    inst pycharm-professional
 }
 
 # advanced
@@ -156,10 +175,18 @@ games() {
 
 office() {
     ask "Install onlyoffice" onlyoffice
+    ask "Install libreoffice" libreoffice
     ask "Install chromium" chromium
     ask "Install firefox" firefox
     ask "Install spotify" spotify
     ask "Install discord" discord
+}
+
+dev() {
+    ask "Install phpstorm" phpstorm
+    ask "Install webstorm" webstorm
+    ask "Install goland" goland
+    ask "Install pycharm" pycharm
 }
 
 advanced() {
@@ -177,4 +204,5 @@ advanced() {
 ask "Global category" global
 ask "Games category" games
 ask "Office category" office
+ask "Dev category" dev
 ask "Advanced category" advanced
