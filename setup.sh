@@ -1,7 +1,7 @@
 #!/bin/bash
 
 inst() {
-    paru --skipreview --noconfirm -S $1
+    paru --skipreview -S $1
 }
 
 # paru
@@ -40,6 +40,12 @@ gnome-config() {
 }
 
 # games
+game-utils() {
+    inst gamemode
+    inst lib32-gamemode
+    inst gamescope
+}
+
 minecraft() {
     inst prismlauncher-qt5-bin
 }
@@ -158,15 +164,13 @@ ask() {
 
 global() {
     ask "Install paru" installer
-    ask "Install gnome extensions" gnome
+    ask "Install gnome extensions (app-icons-taskbar and appindicator)" gnome
     ask "Configure bluetooth" bluetooth
     ask "Configure gnome" gnome-config
 }
 
 games() {
-    inst gamemode
-    inst lib32-gamemode
-    inst gamescope
+    ask "Install utils (gamescope and gamemode)" game-utils
     ask "Install minecraft" minecraft
     ask "Install epicgames" epicgames
     ask "Install steam" steam
