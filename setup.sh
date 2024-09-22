@@ -47,7 +47,7 @@ game-utils() {
 }
 
 minecraft() {
-    inst prismlauncher-qt5-bin
+    inst prismlauncher
 }
 
 epicgames() {
